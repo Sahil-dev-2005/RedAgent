@@ -6,7 +6,7 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 judge_model = genai.GenerativeModel(
-    model_name='gemini-2.0-flash',
+    model_name='gemini-2.0-flash-lite-001',
     generation_config={"temperature": 0} # Zero temp for strict evaluation
 )
 
