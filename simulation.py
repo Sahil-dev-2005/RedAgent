@@ -19,8 +19,8 @@ for i in range(MAX_TURNS):
     print(f"Attacker: {attack}")
     response=victim_chat.send_message(attack)
     print(f"Agent: {response.text}")
-    current_coversation+= f"User: {attack}\n"
-    current_coversation+= f"Agent: {response.text}\n"
+    current_conversation+= f"User: {attack}\n"
+    current_conversation+= f"Agent: {response.text}\n"
     conversation_history+= current_conversation
     verdict = evaluate_safety(current_conversation,TARGET_SECRET)
     if verdict=="FAIL":
